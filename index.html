@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contatti</title>
+</head>
+<body>
+    <h1>Contatti</h1>
+    <form action="#">
+        <fieldset>
+            <legend>Informazioni Anagrafiche</legend>
+            <label for="nome">
+                Nome:
+                <input type="text" name="nome" id="nome" placeholder="nome"/>
+            </label>
+            <label for="cognome">
+                Cognome:
+                <input type="text" name="cognome" id="cognome" placeholder="cognome"/>
+            </label>
+            <label for="codice-fiscale">
+                Nome:
+                <input type="text" name="codice-fiscale" id="codice-fiscale" placeholder="codice fiscale"/>
+            </label>
+            <label for="data-nascita">
+                Data di nascita:
+                <input type="date" name="data-nascita" id="data-nascita"/>
+            </label>
+            <label for="luogo-nascita">
+                Nome:
+                <input type="text" name="luogo-nascita" id="luogo-nascita" placeholder="luogo di nascita"/>
+            </label>
+            <label for="indirizzo">
+                Indirizzo:
+                <input type="text" name="indirizzo" id="indirizzo" placeholder="indirizzo"/>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Preferenze</legend>
+            <label>
+                <input type="radio" name="assicurazione" value="Primo livello"/>
+                Primo livello
+            </label>
+            <label>
+                <input type="radio" name="assicurazione" value="Secondo livello"/>
+                Secondo livello
+            </label>
+            <label>
+                <input type="radio" name="assicurazione" value="Terzo livello"/>
+                Terzo livello
+            </label>
+            <br/>
+            <label>
+                Mezzo preferito:
+                <select name="mezzo-preferito">
+                    <option value="automobile">Automobile</option>
+                    <option value="moto">Moto</option>
+                    <option value="bici">Bicicletta</option>
+                    <option value="monopattino">Monopattino</option>
+                </select>
+            </label>
+            <br/>
+            <label>
+                Automunito
+                <input type="checkbox" name="automunito" id="automunito">
+            </label>
+            <br/>
+            <label>
+                Descrizione:
+                <textarea cols="30" rows="10"></textarea>
+            </label>
+        </fieldset>
+        <button type="submit">Submit</button>
+        <button type="reset">Cancella</button>
+    </form>
+</body>
+</html>
