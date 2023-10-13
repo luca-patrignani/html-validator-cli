@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="icon.png" rel="icon">
+    <link href="style.css" rel="stylesheet">
+    <title>Showing results for contents of text-input area - Nu Html Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="banner">
+        <h1 id="title"><a href="."><span>Nu Html Checker</span></a></h1>
+    </div>
+    <p class="disclaimer">This tool is an ongoing experiment in better HTML checking, and its behavior remains subject
+        to change</p>
+    <h2 id="top">Showing results for contents of text-input area</h2>
+    <form method="get">
+        <fieldset>
+            <legend>Checker Input</legend>
+            <p class="checkboxes">Show <span class="checkboxgroup"><label
+                        title="Display the markup source of the input document." for="showsource"><input type="checkbox"
+                            name="showsource" id="showsource" value="yes" checked="checked">source</label><label
+                        title="Display an outline of the input document." for="showoutline"><input type="checkbox"
+                            name="showoutline" id="showoutline" value="yes">outline</label><label
+                        title="Display a report about the textual alternatives for images." for="showimagereport"><input
+                            type="checkbox" name="showimagereport" id="showimagereport" value="yes">image
+                        report</label></span><input id="show_options" type="button" value="Options…"><span
+                    class="extraoptions hidden"><span class="checkboxgroup"><label
+                            title="Check the content of all responses, including (non-200) error responses"><input
+                                type="checkbox" name="checkerrorpages" id="checkerrorpages" value="yes">check error
+                            pages</label></span><label id="user-agent-label"
+                        title="Specify the user-agent string to send in the document request">User-Agent <input
+                            name="useragent" list="useragents"
+                            value="Validator.nu/LV http://validator.w3.org/services"></label><datalist
+                        id="useragents"></datalist><label id="accept-language-label"
+                        title="Specify the accept-language header to send in the document request">Accept-Language
+                        <input id="acceptlanguage" name="acceptlanguage"></label></span></p>
+            <div id="inputregion"><label id="inputlabel" for="doc">Document URL:</label><input type="url" name="doc"
+                    id="doc" pattern="(?:(?:https?://.+)|(?:data:.+))?"
+                    title="Absolute URL (http, https or data only) of the document to be checked." tabindex="0"
+                    autofocus="autofocus" class="textarea"></div>
+            <p><input value="Check" type="submit" id="submit"></p>
+        </fieldset>
+    </form>
+    <script src="script.js"></script>
+    <script
+        src="data:text/javascript,var%20_paq%3Dwindow._paq%7C%7C%5B%5D%3B_paq.push%28%5B%22trackPageView%22%5D%29%2C_paq.push%28%5B%22enableLinkTracking%22%5D%29%2Cfunction%28%29%7Bvar%20e%3D%22https%3A%2F%2Fwww.w3.org%2Fanalytics%2Fpiwik%2F%22%3B_paq.push%28%5B%22setTrackerUrl%22%2Ce%2B%22matomo.php%22%5D%29%2C_paq.push%28%5B%22setSiteId%22%2C%22444%22%5D%29%3Bvar%20a%3Ddocument%2Ct%3Da.createElement%28%22script%22%29%2Cp%3Da.getElementsByTagName%28%22script%22%29%5B0%5D%3Bt.type%3D%22text%2Fjavascript%22%2Ct.async%3D%210%2Ct.defer%3D%210%2Ct.src%3De%2B%22matomo.js%22%2Cp.parentNode.insertBefore%28t%2Cp%29%7D%28%29%3B"></script>
+    <div id="results">
+        <ol>
+            <li class="info">
+                <p><strong>Info</strong>: <span>Trailing slash on void elements has no effect and interacts badly with
+                        unquoted attribute values.</span></p>
+                <p class="location"><a href="#l4c27">From line <span class="first-line">4</span>, column <span
+                            class="first-col">5</span>; to line <span class="last-line">4</span>, column <span
+                            class="last-col">27</span></a></p>
+                <p class="extract">
+                    <code>head&gt;<span class="lf" title="Line break">↩</span>    <b>&lt;meta charset="UTF-8"/&gt;</b><span class="lf" title="Line break">↩</span>    &lt;</code>
+                </p>
+            </li>
+            <li class="info">
+                <p><strong>Info</strong>: <span>Trailing slash on void elements has no effect and interacts badly with
+                        unquoted attribute values.</span></p>
+                <p class="location"><a href="#l5c75">From line <span class="first-line">5</span>, column <span
+                            class="first-col">5</span>; to line <span class="last-line">5</span>, column <span
+                            class="last-col">75</span></a></p>
+                <p class="extract">
+                    <code>-8"/&gt;<span class="lf" title="Line break">↩</span>    <b>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</b><span class="lf" title="Line break">↩</span>    &lt;</code>
+                </p>
+            </li>
+            <li class="info">
+                <p><strong>Info</strong>: <span>Trailing slash on void elements has no effect and interacts badly with
+                        unquoted attribute values.</span></p>
+                <p class="location"><a href="#l15c77">From line <span class="first-line">15</span>, column <span
+                            class="first-col">17</span>; to line <span class="last-line">15</span>, column <span
+                            class="last-col">77</span></a></p>
+                <p class="extract">
+                    <code>          <b>&lt;input type="text" name="nome" id="nome" placeholder="nome"/&gt;</b><span class="lf" title="Line break">↩</span>     </code>
+                </p>
+            </li>
+            <li class="info">
+                <p><strong>Info</strong>: <span>Trailing slash on void elements has no effect and interacts badly with
+                        unquoted attribute values.</span></p>
+                <p class="location"><a href="#l19c86">From line <span class="first-line">19</span>, column <span
+                            class="first-col">17</span>; to line <span class="last-line">19</span>, column <span
+                            class="last-col">86</span></a></p>
+                <p class="extract">
+                    <code>          <b>&lt;input type="text" name="cognome" id="cognome" placeholder="cognome"/&gt;</b><span class="lf" title="Line break">↩</span>     </code>
+                </p>
+            </li>
+            <li class="info">
+                <p><strong>Info</strong>: <span>Trailing slash on void elements has no effect and interacts badly with
+                        unquoted attribute values.</span></p>
+                <p class="location"><a href="#l23c107">From line <span class="first-line">23</span>, column <span
+                            class="first-col">17</span>; to line <span class="last-line">23</span>, column <span
+                            class="last-col">107</span></a></p>
+                <p class="extract">
+                    <code>          <b>&lt;input type="text" name="codice-fiscale" id="codice-fiscale" placeholder="codice fiscale"/&gt;</b><span class="lf" title="Line break">↩</span>     </code>
+                </p>
+            </li>
+            <li class="info">
+                <p><strong>Info</strong>: <span>Trailing slash on void elements has no effect and interacts badly with
+                        unquoted attribute values.</span></p>
+                <p class="location"><a href="#l27c74">From line <span class="first-line">27</span>, column <span
+                            class="first-col">17</span>; to line <span class="last-line">27</span>, column <span
+                            class="last-col">74</span></a></p>
+                <p class="extract">
+                    <code>          <b>&lt;input type="date" name="data-nascita" id="data-nascita"/&gt;</b><span class="lf" title="Line break">↩</span>     </code>
+                </p>
+            </li>
+            <li class="info">
+                <p><strong>Info</strong>: <span>Trailing slash on void elements has no effect and interacts badly with
+                        unquoted attribute values.</span></p>
+                <p class="location"><a href="#l31c107">From line <span class="first-line">31</span>, column <span
+                            class="first-col">17</span>; to line <span class="last-line">31</span>, column <span
+                            class="last-col">107</span></a></p>
+                <p class="extract">
+                    <code>          <b>&lt;input type="text" name="luogo-nascita" id="luogo-nascita" placeholder="luogo di nascita"/&gt;</b><span class="lf" title="Line break">↩</span>     </code>
+                </p>
+            </li>
+            <li class="info">
+                <p><strong>Info</strong>: <span>Trailing slash on void elements has no effect and interacts badly with
+                        unquoted attribute values.</span></p>
+                <p class="location"><a href="#l35c92">From line <span class="first-line">35</span>, column <span
+                            class="first-col">17</span>; to line <span class="last-line">35</span>, column <span
+                            class="last-col">92</span></a></p>
+                <p class="extract">
+                    <code>          <b>&lt;input type="text" name="indirizzo" id="indirizzo" placeholder="indirizzo"/&gt;</b><span class="lf" title="Line break">↩</span>     </code>
+                </p>
+            </li>
+            <li class="info">
+                <p><strong>Info</strong>: <span>Trailing slash on void elements has no effect and interacts badly with
+                        unquoted attribute values.</span></p>
+                <p class="location"><a href="#l41c80">From line <span class="first-line">41</span>, column <span
+                            class="first-col">17</span>; to line <span class="last-line">41</span>, column <span
+                            class="last-col">80</span></a></p>
+                <p class="extract">
+                    <code>          <b>&lt;input type="radio" name="assicurazione" value="Primo livello"/&gt;</b><span class="lf" title="Line break">↩</span>     </code>
+                </p>
+            </li>
+            <li class="info">
+                <p><strong>Info</strong>: <span>Trailing slash on void elements has no effect and interacts badly with
+                        unquoted attribute values.</span></p>
+                <p class="location"><a href="#l45c82">From line <span class="first-line">45</span>, column <span
+                            class="first-col">17</span>; to line <span class="last-line">45</span>, column <span
+                            class="last-col">82</span></a></p>
+                <p class="extract">
+                    <code>          <b>&lt;input type="radio" name="assicurazione" value="Secondo livello"/&gt;</b><span class="lf" title="Line break">↩</span>     </code>
+                </p>
+            </li>
+            <li class="info">
+                <p><strong>Info</strong>: <span>Trailing slash on void elements has no effect and interacts badly with
+                        unquoted attribute values.</span></p>
+                <p class="location"><a href="#l49c80">From line <span class="first-line">49</span>, column <span
+                            class="first-col">17</span>; to line <span class="last-line">49</span>, column <span
+                            class="last-col">80</span></a></p>
+                <p class="extract">
+                    <code>          <b>&lt;input type="radio" name="assicurazione" value="Terzo livello"/&gt;</b><span class="lf" title="Line break">↩</span>     </code>
+                </p>
+            </li>
+            <li class="info">
+                <p><strong>Info</strong>: <span>Trailing slash on void elements has no effect and interacts badly with
+                        unquoted attribute values.</span></p>
+                <p class="location"><a href="#l52c17">From line <span class="first-line">52</span>, column <span
+                            class="first-col">13</span>; to line <span class="last-line">52</span>, column <span
+                            class="last-col">17</span></a></p>
+                <p class="extract">
+                    <code>          <b>&lt;br/&gt;</b><span class="lf" title="Line break">↩</span>     </code></p>
+            </li>
+            <li class="info">
+                <p><strong>Info</strong>: <span>Trailing slash on void elements has no effect and interacts badly with
+                        unquoted attribute values.</span></p>
+                <p class="location"><a href="#l62c17">From line <span class="first-line">62</span>, column <span
+                            class="first-col">13</span>; to line <span class="last-line">62</span>, column <span
+                            class="last-col">17</span></a></p>
+                <p class="extract">
+                    <code>          <b>&lt;br/&gt;</b><span class="lf" title="Line break">↩</span>     </code></p>
+            </li>
+            <li class="info">
+                <p><strong>Info</strong>: <span>Trailing slash on void elements has no effect and interacts badly with
+                        unquoted attribute values.</span></p>
+                <p class="location"><a href="#l67c17">From line <span class="first-line">67</span>, column <span
+                            class="first-col">13</span>; to line <span class="last-line">67</span>, column <span
+                            class="last-col">17</span></a></p>
+                <p class="extract">
+                    <code>          <b>&lt;br/&gt;</b><span class="lf" title="Line break">↩</span>     </code></p>
+            </li>
+        </ol>
+        <p class="success">The document validates according to the specified schema(s).</p>
+        <h2 id="source">Source</h2>
+        <ol class="source">
+            <li id="l1"><code>&lt;!DOCTYPE html&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l2"><code>&lt;html lang="en"&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l3"><code>&lt;head&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l4"><code>    <b id="l4c27" class="l4c27">&lt;meta charset="UTF-8"/&gt;</b></code><code class="lf"
+                    title="Line break">↩</code></li>
+            <li id="l5">
+                <code>    <b id="l5c75" class="l5c75">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</b></code><code
+                    class="lf" title="Line break">↩</code></li>
+            <li id="l6"><code>    &lt;title&gt;Contatti&lt;/title&gt;</code><code class="lf" title="Line break">↩</code>
+            </li>
+            <li id="l7"><code>&lt;/head&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l8"><code>&lt;body&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l9"><code>    &lt;h1&gt;Contatti&lt;/h1&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l10"><code>    &lt;form action="#"&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l11"><code>        &lt;fieldset&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l12"><code>            &lt;legend&gt;Informazioni Anagrafiche&lt;/legend&gt;</code><code class="lf"
+                    title="Line break">↩</code></li>
+            <li id="l13"><code>            &lt;label for="nome"&gt;</code><code class="lf" title="Line break">↩</code>
+            </li>
+            <li id="l14"><code>                Nome:</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l15">
+                <code>                <b id="l15c77" class="l15c77">&lt;input type="text" name="nome" id="nome" placeholder="nome"/&gt;</b></code><code
+                    class="lf" title="Line break">↩</code></li>
+            <li id="l16"><code>            &lt;/label&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l17"><code>            &lt;label for="cognome"&gt;</code><code class="lf"
+                    title="Line break">↩</code></li>
+            <li id="l18"><code>                Cognome:</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l19">
+                <code>                <b id="l19c86" class="l19c86">&lt;input type="text" name="cognome" id="cognome" placeholder="cognome"/&gt;</b></code><code
+                    class="lf" title="Line break">↩</code></li>
+            <li id="l20"><code>            &lt;/label&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l21"><code>            &lt;label for="codice-fiscale"&gt;</code><code class="lf"
+                    title="Line break">↩</code></li>
+            <li id="l22"><code>                Nome:</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l23">
+                <code>                <b id="l23c107" class="l23c107">&lt;input type="text" name="codice-fiscale" id="codice-fiscale" placeholder="codice fiscale"/&gt;</b></code><code
+                    class="lf" title="Line break">↩</code></li>
+            <li id="l24"><code>            &lt;/label&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l25"><code>            &lt;label for="data-nascita"&gt;</code><code class="lf"
+                    title="Line break">↩</code></li>
+            <li id="l26"><code>                Data di nascita:</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l27">
+                <code>                <b id="l27c74" class="l27c74">&lt;input type="date" name="data-nascita" id="data-nascita"/&gt;</b></code><code
+                    class="lf" title="Line break">↩</code></li>
+            <li id="l28"><code>            &lt;/label&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l29"><code>            &lt;label for="luogo-nascita"&gt;</code><code class="lf"
+                    title="Line break">↩</code></li>
+            <li id="l30"><code>                Nome:</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l31">
+                <code>                <b id="l31c107" class="l31c107">&lt;input type="text" name="luogo-nascita" id="luogo-nascita" placeholder="luogo di nascita"/&gt;</b></code><code
+                    class="lf" title="Line break">↩</code></li>
+            <li id="l32"><code>            &lt;/label&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l33"><code>            &lt;label for="indirizzo"&gt;</code><code class="lf"
+                    title="Line break">↩</code></li>
+            <li id="l34"><code>                Indirizzo:</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l35">
+                <code>                <b id="l35c92" class="l35c92">&lt;input type="text" name="indirizzo" id="indirizzo" placeholder="indirizzo"/&gt;</b></code><code
+                    class="lf" title="Line break">↩</code></li>
+            <li id="l36"><code>            &lt;/label&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l37"><code>        &lt;/fieldset&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l38"><code>        &lt;fieldset&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l39"><code>            &lt;legend&gt;Preferenze&lt;/legend&gt;</code><code class="lf"
+                    title="Line break">↩</code></li>
+            <li id="l40"><code>            &lt;label&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l41">
+                <code>                <b id="l41c80" class="l41c80">&lt;input type="radio" name="assicurazione" value="Primo livello"/&gt;</b></code><code
+                    class="lf" title="Line break">↩</code></li>
+            <li id="l42"><code>                Primo livello</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l43"><code>            &lt;/label&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l44"><code>            &lt;label&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l45">
+                <code>                <b id="l45c82" class="l45c82">&lt;input type="radio" name="assicurazione" value="Secondo livello"/&gt;</b></code><code
+                    class="lf" title="Line break">↩</code></li>
+            <li id="l46"><code>                Secondo livello</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l47"><code>            &lt;/label&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l48"><code>            &lt;label&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l49">
+                <code>                <b id="l49c80" class="l49c80">&lt;input type="radio" name="assicurazione" value="Terzo livello"/&gt;</b></code><code
+                    class="lf" title="Line break">↩</code></li>
+            <li id="l50"><code>                Terzo livello</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l51"><code>            &lt;/label&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l52"><code>            <b id="l52c17" class="l52c17">&lt;br/&gt;</b></code><code class="lf"
+                    title="Line break">↩</code></li>
+            <li id="l53"><code>            &lt;label&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l54"><code>                Mezzo preferito:</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l55"><code>                &lt;select name="mezzo-preferito"&gt;</code><code class="lf"
+                    title="Line break">↩</code></li>
+            <li id="l56">
+                <code>                    &lt;option value="automobile"&gt;Automobile&lt;/option&gt;</code><code
+                    class="lf" title="Line break">↩</code></li>
+            <li id="l57"><code>                    &lt;option value="moto"&gt;Moto&lt;/option&gt;</code><code class="lf"
+                    title="Line break">↩</code></li>
+            <li id="l58"><code>                    &lt;option value="bici"&gt;Bicicletta&lt;/option&gt;</code><code
+                    class="lf" title="Line break">↩</code></li>
+            <li id="l59">
+                <code>                    &lt;option value="monopattino"&gt;Monopattino&lt;/option&gt;</code><code
+                    class="lf" title="Line break">↩</code></li>
+            <li id="l60"><code>                &lt;/select&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l61"><code>            &lt;/label&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l62"><code>            <b id="l62c17" class="l62c17">&lt;br/&gt;</b></code><code class="lf"
+                    title="Line break">↩</code></li>
+            <li id="l63"><code>            &lt;label&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l64"><code>                Automunito</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l65">
+                <code>                &lt;input type="checkbox" name="automunito" id="automunito"&gt;</code><code
+                    class="lf" title="Line break">↩</code></li>
+            <li id="l66"><code>            &lt;/label&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l67"><code>            <b id="l67c17" class="l67c17">&lt;br/&gt;</b></code><code class="lf"
+                    title="Line break">↩</code></li>
+            <li id="l68"><code>            &lt;label&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l69"><code>                Descrizione:</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l70"><code>                &lt;textarea cols="30" rows="10"&gt;&lt;/textarea&gt;</code><code
+                    class="lf" title="Line break">↩</code></li>
+            <li id="l71"><code>            &lt;/label&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l72"><code>        &lt;/fieldset&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l73"><code>        &lt;button type="submit"&gt;Submit&lt;/button&gt;</code><code class="lf"
+                    title="Line break">↩</code></li>
+            <li id="l74"><code>        &lt;button type="reset"&gt;Cancella&lt;/button&gt;</code><code class="lf"
+                    title="Line break">↩</code></li>
+            <li id="l75"><code>    &lt;/form&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l76"><code>&lt;/body&gt;</code><code class="lf" title="Line break">↩</code></li>
+            <li id="l77"><code>&lt;/html&gt;</code></li>
+        </ol>
+        <div class="details">
+            <p class="msgschema">Used the schema for HTML + SVG 1.1 + MathML 3.0 + RDFa 1.1.</p>
+            <p class="msgmediatype">Used the HTML parser.
+        </div>
+        <p class="stats">Total execution time 9 milliseconds.</p>
+    </div>
+    <hr>
+    <div id="about">
+        <p><a href="about.html">About this checker</a> • <a href="about.html#issues">Report an issue</a> • <span
+                class="version">Version: 23.8.18</span></p>
+    </div>
+</body>
+
+</html>

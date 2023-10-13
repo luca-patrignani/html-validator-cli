@@ -16,7 +16,6 @@ var htmlFile string
 const validatorUrl = "https://validator.w3.org/nu/"
 
 func main() {
-
     remoteURL := validatorUrl
     client := http.DefaultClient
 
@@ -24,13 +23,24 @@ func main() {
     values := map[string]io.Reader{
         "fragment": strings.NewReader(htmlFile),
     }
-    err := Upload(client, remoteURL, values)
+    resp, err := Upload(client, remoteURL, values)
+    if err != nil {
+		panic(err)
+    }
+    /*
+    b, err := io.ReadAll(resp.Body)
     if err != nil {
         panic(err)
     }
+    err = os.WriteFile("resp.html", b, 0644)
+    if err != nil {
+        panic(err)
+    }
+    */
+    parse(resp.Body)
 }
 
-func Upload(client *http.Client, url string, values map[string]io.Reader) (err error) {
+func Upload(client *http.Client, url string, values map[string]io.Reader) (res *http.Response, err error) {
     // Prepare a form that you will submit to that URL.
     var b bytes.Buffer
     w := multipart.NewWriter(&b)
@@ -43,7 +53,7 @@ func Upload(client *http.Client, url string, values map[string]io.Reader) (err e
 			return
 		}
         if _, err = io.Copy(fw, r); err != nil {
-            return err
+            return
         }
 
     }
@@ -60,7 +70,7 @@ func Upload(client *http.Client, url string, values map[string]io.Reader) (err e
     req.Header.Set("Content-Type", w.FormDataContentType())
 
     // Submit the request
-    res, err := client.Do(req)
+    res, err = client.Do(req)
     if err != nil {
         return
     }
@@ -69,10 +79,5 @@ func Upload(client *http.Client, url string, values map[string]io.Reader) (err e
     if res.StatusCode != http.StatusOK {
         err = fmt.Errorf("bad status: %s", res.Status)
     }
-	body, err := io.ReadAll(res.Body)
-	if err != nil {
-		panic(err)
-	}
-	fmt.Println(string(body))
     return
 }
