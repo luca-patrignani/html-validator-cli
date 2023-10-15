@@ -13,14 +13,17 @@ func parse(r io.Reader) error {
 	if err != nil {
 		return err
 	}
-	doc.Find(".info").Each(func(_ int, s *goquery.Selection) {
-		info := s.Find("p span").Text()
-		fmt.Println("Info:", info)
-		fl := s.Find("p.location span.first-line").Text()
-		fc := s.Find("p.location span.first-col").Text()
-		ll := s.Find("p.location span.last-line").Text()
-		lc := s.Find("p.location span.last-col").Text()
-		fmt.Printf("\tFrom %s:%s to %s:%s\n", fl, fc, ll, lc)
-	})
+	for _, label := range []string{".error", ".warning", ".info"} {
+		doc.Find(label).Each(func(_ int, s *goquery.Selection) {
+			description := s.Find("p span").First().Text()
+			resultType := s.Find("p strong").Text()
+			fmt.Println(resultType, ":", description)
+			fl := s.Find("p.location span.first-line").Text()
+			fc := s.Find("p.location span.first-col").Text()
+			ll := s.Find("p.location span.last-line").Text()
+			lc := s.Find("p.location span.last-col").Text()
+			fmt.Printf("\tFrom %s:%s to %s:%s\n", fl, fc, ll, lc)
+		})
+	}
 	return nil
 }
