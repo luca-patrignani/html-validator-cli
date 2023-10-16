@@ -19,7 +19,7 @@ func main() {
 		panic("Wrong number of arguments")
 	}
 	filename := flag.Arg(0)
-    f, err := os.Open(filename)
+	f, err := os.Open(filename)
 	if err != nil {
 		panic(err)
 	}
@@ -35,7 +35,11 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	printResults(filename, results)
+	po := printOptions{descriptionsIgnored: []string{
+			"Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.",
+		},
+	}
+	printResults(po, filename, results)
 }
 
 func upload(url string, values map[string]io.Reader) (io.ReadCloser, error) {
