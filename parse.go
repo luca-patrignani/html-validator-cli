@@ -1,29 +1,56 @@
 package main
 
 import (
-	"fmt"
 	"io"
+	"strconv"
 
 	"github.com/PuerkitoBio/goquery"
 )
 
+type ResultLine struct {
+	resultType  string
+	description string
+	fl          int
+	fc          int
+	ll          int
+	lc          int
+}
 
-func parse(r io.Reader) error {
+func parse(r io.Reader) ([]ResultLine, error) {
 	doc, err := goquery.NewDocumentFromReader(r)
 	if err != nil {
-		return err
+		return nil, err
 	}
+	results := []ResultLine{}
 	for _, label := range []string{".error", ".warning", ".info"} {
 		doc.Find(label).Each(func(_ int, s *goquery.Selection) {
 			description := s.Find("p span").First().Text()
 			resultType := s.Find("p strong").Text()
-			fmt.Println(resultType, ":", description)
-			fl := s.Find("p.location span.first-line").Text()
-			fc := s.Find("p.location span.first-col").Text()
-			ll := s.Find("p.location span.last-line").Text()
-			lc := s.Find("p.location span.last-col").Text()
-			fmt.Printf("\tFrom %s:%s to %s:%s\n", fl, fc, ll, lc)
+			fl, err := strconv.Atoi(s.Find("p.location span.first-line").Text())
+			if err != nil {
+				return
+			}
+			fc, err := strconv.Atoi(s.Find("p.location span.first-col").Text())
+			if err != nil {
+				return
+			}
+			ll, err := strconv.Atoi(s.Find("p.location span.last-line").Text())
+			if err != nil {
+				return
+			}
+			lc, err := strconv.Atoi(s.Find("p.location span.last-col").Text())
+			if err != nil {
+				return
+			}
+			results = append(results, ResultLine{
+				resultType:  resultType,
+				description: description,
+				fl:          fl,
+				fc:          fc,
+				ll:          ll,
+				lc:          lc,
+			})
 		})
 	}
-	return nil
+	return results, nil
 }
